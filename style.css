@@ -1,0 +1,112 @@
+body, nav, main, article, aside, footer{
+    
+}
+main{
+    display: grid;
+    grid-template-areas: "ar ar ar as"
+                         "f f f f";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+header{
+    font-size: 45px;
+    color: rgb(3, 196, 154);
+}
+nav{
+    border: 5px;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr ;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: rgb(3, 196, 154);
+}
+nav li{
+    
+}
+nav li a {
+  display: block;
+  color: rgb(165, 247, 229);
+  text-align: center;
+  padding: 14px 5px;
+  text-decoration: none;
+}
+nav li a:hover {
+    background-color: rgb(255, 255, 255);
+    color: #000;
+  }
+.mutyo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+article{
+    grid-area: ar;
+    text-align: justify;
+    padding: 8px;
+}
+.ember{
+    margin: 20px;
+    padding: 20px;
+    text-align: justify;
+    font-size: 15px;
+    border: solid 1px gray ;
+    border-radius: 5px;
+}
+.ember img{
+    width: 100%;
+    border: solid 1px gray ;
+    border-radius: 5px;
+    padding: 5px;
+}
+.ember h1{
+    border: solid 1px gray ;
+    border-radius: 5px;
+}
+aside{
+    grid-area: as;
+}
+aside img{
+    width: 100%;
+    border: solid 1px gray ;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+footer{
+    grid-area: f;
+    text-align: center;
+    color: rgb(3, 196, 154);
+}
+*{
+    box-sizing: border-box;
+}
+table {
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    padding-right: 30px;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 25px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+@media screen and (max-width: 600px) {
+    article{
+        grid-template-columns: 1fr;  
+    }
+    main{
+        grid-template-areas: "ar"
+                             "as"
+                             "f ";
+    }
+    nav ul{
+        grid-template-columns: auto;
+    }
+}
